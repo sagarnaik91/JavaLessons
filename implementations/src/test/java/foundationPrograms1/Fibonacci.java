@@ -1,6 +1,7 @@
-package foundationPrograms;
+package foundationPrograms1;
 //n1+n2
 //0+1+1+2+3+5+8..
+//https://www.javatpoint.com/fibonacci-series-in-java
 public class Fibonacci {
 
 	public static void main(String[] args) {

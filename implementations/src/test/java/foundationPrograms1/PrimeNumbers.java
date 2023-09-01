@@ -1,5 +1,5 @@
-package foundationPrograms;
-
+package foundationPrograms1;
+//https://www.javatpoint.com/prime-number-program-in-java
 public class PrimeNumbers {
 
 	public static void main(String[] args) {

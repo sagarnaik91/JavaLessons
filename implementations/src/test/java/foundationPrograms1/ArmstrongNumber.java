@@ -1,5 +1,5 @@
-package foundationPrograms;
-
+package foundationPrograms1;
+//https://www.javatpoint.com/armstrong-number-in-java
 //153: 13 + 53 + 33 = 1 + 125+ 27 = 153
 public class ArmstrongNumber {
 

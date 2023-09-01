@@ -1,4 +1,4 @@
-package foundationPrograms;
+package foundationPrograms1;
 
 public class SwapNumber {
 	static int temp;

@@ -1,4 +1,4 @@
-package foundationPrograms;
+package foundationPrograms1;
 
 public class PalindromeAlternateApproach {
 	static String s1;
