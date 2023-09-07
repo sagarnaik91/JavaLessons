@@ -3,11 +3,39 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Test(failed)">
     <classes>
+      <class name="selenium.Dropdown">
+        <methods>
+          <include name="dropdwn"/>
+          <include name="launch"/>
+        </methods>
+      </class> <!-- selenium.Dropdown -->
       <class name="restAssured.Oauth">
         <methods>
           <include name="getUser"/>
         </methods>
       </class> <!-- restAssured.Oauth -->
+      <class name="restAssured.SendGetReq">
+        <methods>
+          <include name="getReq"/>
+        </methods>
+      </class> <!-- restAssured.SendGetReq -->
+      <class name="selenium.MouseHover">
+        <methods>
+          <include name="launch"/>
+          <include name="mouseHover"/>
+        </methods>
+      </class> <!-- selenium.MouseHover -->
+      <class name="restAssured.RestCountriesGETApi">
+        <methods>
+          <include name="getRequest"/>
+        </methods>
+      </class> <!-- restAssured.RestCountriesGETApi -->
+      <class name="selenium.CountLinks">
+        <methods>
+          <include name="launch"/>
+          <include name="countLinks"/>
+        </methods>
+      </class> <!-- selenium.CountLinks -->
       <class name="selenium.Screenshot">
         <methods>
           <include name="launch"/>
