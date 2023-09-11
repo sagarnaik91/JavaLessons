@@ -9,7 +9,7 @@ public class ReadingExlData {
 	public static void main(String[] args) {
 
 		ExcelReader excel = new ExcelReader(
-				"C:\\Users\\003BF8744\\testDevelopement\\java\\testData\\fetchTestData\\src\\test\\java\\testData\\BankManagerSuite.xlsx");
+				".\\src\\test\\java\\testData\\BankManagerSuite.xlsx");
 		int rows = excel.getRowCount(Constants.DATA_SHEET);
 		System.out.println("Total rows are " + rows);
 		String testName = "OpenAccountTest";
