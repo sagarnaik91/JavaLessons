@@ -5,7 +5,7 @@
     <classes>
       <class name="testCases.CreateCustomerStripeAPI">
         <methods>
-          <include name="createCustomerWithValidKey" invocation-numbers="0"/>
+          <include name="createCustomerWithInvalidKey"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.CreateCustomerStripeAPI -->
