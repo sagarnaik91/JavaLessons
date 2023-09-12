@@ -12,8 +12,7 @@ import utilities.ExcelReader;
 public class BaseTest {
 	public static Properties config = new Properties();
 	public static FileInputStream fis;
-	public static ExcelReader excelReader = new ExcelReader(
-			"C:\\Users\\003BF8744\\testDevelopement\\java\\restAssuredFramework\\frameworkForAPITesting\\Excel\\testdata.xlsx");
+	public static ExcelReader excelReader = new ExcelReader(".\\src\\test\\java\\excel\\testdata.xlsx");
 
 	@BeforeSuite
 	public static void setup() throws IOException {

@@ -12,7 +12,7 @@ public class ReadingExlData {
 				".\\src\\test\\java\\testData\\BankManagerSuite.xlsx");
 		int rows = excel.getRowCount(Constants.DATA_SHEET);
 		System.out.println("Total rows are " + rows);
-		String testName = "OpenAccountTest";
+		String testName = "AddCustomerTest";
 		int testCaseRowNum = 1;
 		for (testCaseRowNum = 1; testCaseRowNum <= rows; testCaseRowNum++) {
 			String TestCaseName = excel.getCellData(Constants.DATA_SHEET, 0, testCaseRowNum);

@@ -8,7 +8,7 @@ import baseClass.BaseTest;
 
 public class DataUtil extends BaseTest {
 
-	@DataProvider(name = "user")
+	@DataProvider(name = "getData")
 	public Object[][] dataSets(Method m) {
 		String sheetName = m.getName();
 		int rows = excelReader.getRowCount(sheetName);
