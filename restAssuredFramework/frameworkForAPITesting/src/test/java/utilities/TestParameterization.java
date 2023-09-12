@@ -9,11 +9,12 @@ import org.testng.annotations.Test;
 import baseClass.BaseTest;
 
 public class TestParameterization extends BaseTest {
-	@Test(dataProvider = "getData")
-	/*public static void testData(Hashtable<String, String> data) {
-		System.out.println(data.get("runmode") + "---" + data.get("firstname") + "---" + data.get("lastname") + "---"
-				+ data.get("postcode") + "---");
-	}*/
+	/*
+	 * @Test(dataProvider = "getData") public static void testData(Hashtable<String,
+	 * String> data) { System.out.println(data.get("runmode") + "---" +
+	 * data.get("firstname") + "---" + data.get("lastname") + "---" +
+	 * data.get("postcode") + "---"); }
+	 */
 	/*
 	 * @Test(dataProvider = "getData") public static void testData(String runmode,
 	 * String firstname, String lastname, String postcode) {
