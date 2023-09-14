@@ -7,12 +7,14 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
+import listener.ExtentListeners;
 import utilities.DataUtil;
 
 //This class takes the data from the utilities.DataUtil
 public class CreateCustomerStripeAPIbasic extends baseClass.BaseTest {
 	@Test(dataProviderClass = DataUtil.class, priority = 1, dataProvider = "DataUtil")
 	public static void cxCreationValidKey(String name, String email, String description) {
+		ExtentListeners.testReport.get().info(email);
 		Response res = given().auth().basic(config.getProperty("validSecretKey"), "").formParam("name", name)
 				.formParam("email", email).formParam("description", description).post("customers");
 		res.prettyPrint();

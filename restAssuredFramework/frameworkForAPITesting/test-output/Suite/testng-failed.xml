@@ -4,14 +4,14 @@
   <listeners>
     <listener class-name="listener.ExtentListeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Test(failed)">
+  <test thread-count="5" parallel="tests" name="Delete a customer(failed)">
     <classes>
       <class name="testCases.DeleteCustomer">
         <methods>
-          <include name="deleteCustomer" invocation-numbers="9 5 8 3 0 2 6 4 7 1 10 12 11 13"/>
+          <include name="deleteCustomer" invocation-numbers="0"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.DeleteCustomer -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Delete a customer(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -4,12 +4,16 @@
 	<listeners>
 	<listener class-name="listener.ExtentListeners"></listener>
 </listeners>
-  <test name="Test">
+  <test name="Create a customer">
     <classes>
       <class name="testCases.CreateCustomerStripeAPIbasic"/>
       <class name="testCases.CreateCustomerStripeAPI2"/>
       <class name="testCases.CreateCustomerStripeAPI"/>
+    </classes>
+  </test>
+  <test name="Delete a customer">
+    <classes>
       <class name="testCases.DeleteCustomer"></class>
     </classes>
-  </test> <!-- Test -->
+  </test>  <!-- Test -->
 </suite> <!-- Suite -->

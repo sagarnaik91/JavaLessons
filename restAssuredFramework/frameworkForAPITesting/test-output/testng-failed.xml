@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Default test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="listener.ExtentListeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Delete a customer(failed)">
     <classes>
       <class name="testCases.DeleteCustomer">
         <methods>
@@ -10,5 +13,5 @@
         </methods>
       </class> <!-- testCases.DeleteCustomer -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Delete a customer(failed) -->
+</suite> <!-- Failed suite [Suite] -->
