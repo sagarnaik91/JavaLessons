@@ -4,14 +4,14 @@
   <listeners>
     <listener class-name="listener.ExtentListeners"/>
   </listeners>
-  <test thread-count="5" parallel="tests" name="Delete a customer(failed)">
+  <test thread-count="5" parallel="tests" name="Create a customer(failed)">
     <classes>
-      <class name="testCases.DeleteCustomer">
+      <class name="testCases.CreateCustomerStripeAPIbasic">
         <methods>
-          <include name="deleteCustomer" invocation-numbers="0"/>
+          <include name="cxCreationValidKey" invocation-numbers="0 1"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.DeleteCustomer -->
+      </class> <!-- testCases.CreateCustomerStripeAPIbasic -->
     </classes>
-  </test> <!-- Delete a customer(failed) -->
+  </test> <!-- Create a customer(failed) -->
 </suite> <!-- Failed suite [Suite] -->
