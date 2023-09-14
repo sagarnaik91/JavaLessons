@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="utilityPractice.TestCase">
+      <class name="testCases.DeleteCustomer">
         <methods>
-          <include name="cxCreationInvalidKey"/>
+          <include name="deleteCustomer" invocation-numbers="0"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- utilityPractice.TestCase -->
+      </class> <!-- testCases.DeleteCustomer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

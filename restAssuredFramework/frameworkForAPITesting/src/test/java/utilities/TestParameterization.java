@@ -22,7 +22,7 @@ public class TestParameterization extends BaseTest {
 	 * postcode + "---"); }
 	 */
 
-	@DataProvider
+	@DataProvider(parallel = true)
 	public Object[][] getData(Method m) {
 
 		// ExcelReader excel = new ExcelReader(

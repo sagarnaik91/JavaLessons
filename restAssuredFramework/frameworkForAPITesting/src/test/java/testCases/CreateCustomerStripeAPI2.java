@@ -13,7 +13,7 @@ import utilities.TestParameterization;
 public class CreateCustomerStripeAPI2 extends baseClass.BaseTest {
 	@Test(dataProviderClass = TestParameterization.class, priority = 1, dataProvider = "getData")
 	public static void cxCreationValidKey(Hashtable<String, String> table) {
-		Response res = given().auth().basic("sk_test_4eC39HqLyjWDarjtT1zdp7dc", "").formParam("name", table.get("name"))
+		Response res = given().auth().basic(config.getProperty("validSecretKey"), "").formParam("name", table.get("name"))
 				.formParam("email", table.get("email")).formParam("description", table.get("email")).post("customers");
 		res.prettyPrint();
 		Assert.assertEquals(res.getStatusCode(), 200);
@@ -22,7 +22,7 @@ public class CreateCustomerStripeAPI2 extends baseClass.BaseTest {
 
 	@Test(dataProviderClass = TestParameterization.class, priority = 2, dataProvider = "getData")
 	public static void cxCreationInvalidKey(Hashtable<String, String> table) {
-		Response res = given().auth().basic("sk_test_4eC39HqLyjWDarjtT1zdp7dc123", "")
+		Response res = given().auth().basic(config.getProperty("invalidSecretKey"), "")
 				.formParam("name", table.get("name")).formParam("email", table.get("email"))
 				.formParam("description", table.get("email")).post("customers");
 		res.prettyPrint();
