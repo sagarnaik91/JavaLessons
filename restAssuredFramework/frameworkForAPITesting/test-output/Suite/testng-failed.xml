@@ -8,7 +8,7 @@
     <classes>
       <class name="testCases.CreateCustomerStripeAPIbasic">
         <methods>
-          <include name="cxCreationValidKey" invocation-numbers="0 1"/>
+          <include name="cxCreationValidKey" invocation-numbers="0"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.CreateCustomerStripeAPIbasic -->
