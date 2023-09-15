@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.DeleteCustomer">
+      <class name="utilityPractice.PayPal">
         <methods>
-          <include name="deleteCustomer" invocation-numbers="0"/>
-          <include name="setup"/>
+          <include name="getAccessToken"/>
         </methods>
-      </class> <!-- testCases.DeleteCustomer -->
+      </class> <!-- utilityPractice.PayPal -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
