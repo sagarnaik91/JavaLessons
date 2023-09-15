@@ -15,8 +15,11 @@ public class CreateCustomerStripeAPIbasic extends baseClass.BaseTest {
 	@Test(dataProviderClass = DataUtil.class, priority = 1, dataProvider = "DataUtil")
 	public static void cxCreationValidKey(String name, String email, String description) {
 		ExtentListeners.testReport.get().info(email);
+		System.out.println("name is "+name);
+		System.out.println("email is "+email);
+		System.out.println("description is "+description);
 		Response res = given().auth().basic(config.getProperty("validSecretKey"), "").formParam("name", name)
-				.formParam("email", email).formParam("description", description).post("customers");
+				.formParam("email", email).formParam("description", description).log().all().post("customers");
 		res.prettyPrint();
 		Assert.assertEquals(res.getStatusCode(), 200);
 

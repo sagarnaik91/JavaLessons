@@ -2,8 +2,7 @@ package utilities;
 
 import org.json.JSONObject;
 
-import com.aventstack.extentreports.ExtentReporter;
-
+import io.restassured.response.Response;
 import listener.ExtentListeners;
 
 public class TestUtil {
@@ -19,5 +18,9 @@ public class TestUtil {
 		ExtentListeners.testReport.get().info("Validating the value of the key " + key);
 		String keyValue = jsonObject.get(key).toString();
 		return keyValue;
+	}
+
+	public static String getKeyJsonPath(Response res, String key) {
+		return res.jsonPath().getString(key);
 	}
 }
