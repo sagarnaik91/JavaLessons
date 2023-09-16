@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-15T15:20:17Z" name="Default suite" finished-at="2023-09-15T15:20:22Z" duration-ms="4764">
+  <suite started-at="2023-09-16T11:19:36Z" name="Default suite" finished-at="2023-09-16T11:19:40Z" duration-ms="3804">
     <groups>
     </groups>
-    <test started-at="2023-09-15T15:20:17Z" name="Default test" finished-at="2023-09-15T15:20:22Z" duration-ms="4764">
+    <test started-at="2023-09-16T11:19:36Z" name="Default test" finished-at="2023-09-16T11:19:40Z" duration-ms="3804">
       <class name="utilityPractice.PayPal">
-        <test-method signature="getAccessToken()[pri:0, instance:utilityPractice.PayPal@6bc407fd]" started-at="2023-09-15T15:20:17Z" name="getAccessToken" finished-at="2023-09-15T15:20:21Z" duration-ms="3857" status="PASS">
+        <test-method signature="getAccessToken()[pri:0, instance:utilityPractice.PayPal@6bc407fd]" started-at="2023-09-16T11:19:36Z" name="getAccessToken" finished-at="2023-09-16T11:19:39Z" duration-ms="2576" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAccessToken -->
-        <test-method signature="createOrder()[pri:2, instance:utilityPractice.PayPal@6bc407fd]" started-at="2023-09-15T15:20:21Z" name="createOrder" finished-at="2023-09-15T15:20:22Z" depends-on-methods="utilityPractice.PayPal.getAccessToken" duration-ms="886" status="PASS">
+        <test-method signature="createOrder()[pri:2, instance:utilityPractice.PayPal@6bc407fd]" started-at="2023-09-16T11:19:39Z" name="createOrder" finished-at="2023-09-16T11:19:40Z" depends-on-methods="utilityPractice.PayPal.getAccessToken" duration-ms="1209" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrder -->

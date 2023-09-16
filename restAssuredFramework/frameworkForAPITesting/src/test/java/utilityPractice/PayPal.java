@@ -2,12 +2,16 @@ package utilityPractice;
 
 import static io.restassured.RestAssured.given;
 
+import java.util.ArrayList;
+
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import pojo.Orders;
+import pojo.Purchase_units;
 
 public class PayPal {
 	public static String client_Id = "AcC6jQ1POX_mMAQQfmxwPG_rWnew3WDohOjBzqeXS8Su0k_hgDHbEBwZyRep-Mgc2ex3XMH9g-ISZ9tU";
@@ -29,11 +33,18 @@ public class PayPal {
 	@Test(priority = 2, dependsOnMethods = "getAccessToken")
 	public static void createOrder() {
 		RestAssured.baseURI = "https://api-m.sandbox.paypal.com";
-		String body = "{\r\n" + "  \"intent\": \"CAPTURE\",\r\n" + "  \"purchase_units\": [\r\n" + "    {\r\n"
-				+ "      \"reference_id\": \"d9f80740-38f0-11e8-b467-0ed5f89f718b\",\r\n" + "      \"amount\": {\r\n"
-				+ "        \"currency_code\": \"USD\",\r\n" + "        \"value\": \"100.00\"\r\n" + "      }\r\n"
-				+ "    }\r\n" + "  ]\r\n" + "}";
-		Response res = given().contentType(ContentType.JSON).auth().oauth2(accesstoken).body(body)
+		ArrayList<Purchase_units> list = new ArrayList<>();
+		list.add(new Purchase_units("USD", "101", "d9f80740-38f0-11e8-b467-0ed5f89f718b"));
+		Orders body = new Orders("CAPTURE", list);
+		/*
+		 * String body = "{\r\n" + "  \"intent\": \"CAPTURE\",\r\n" +
+		 * "  \"purchase_units\": [\r\n" + "    {\r\n" +
+		 * "      \"reference_id\": \"d9f80740-38f0-11e8-b467-0ed5f89f718b\",\r\n" +
+		 * "      \"amount\": {\r\n" + "        \"currency_code\": \"USD\",\r\n" +
+		 * "        \"value\": \"100.00\"\r\n" + "      }\r\n" + "    }\r\n" + "  ]\r\n"
+		 * + "}";
+		 */
+		Response res = given().contentType(ContentType.JSON).auth().oauth2(accesstoken).body(body).log().all()
 				.post("/v2/checkout/orders");
 		res.prettyPrint();
 		Assert.assertEquals(res.jsonPath().getString("status"), "CREATED");
