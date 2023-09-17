@@ -4,14 +4,50 @@
   <listeners>
     <listener class-name="listener.ExtentListeners"/>
   </listeners>
+  <test thread-count="5" parallel="tests" name="PayPal(failed)">
+    <classes>
+      <class name="utilityPractice.PayPal">
+        <methods>
+          <include name="createOrder"/>
+          <include name="getOrders"/>
+          <include name="getAccessToken"/>
+        </methods>
+      </class> <!-- utilityPractice.PayPal -->
+    </classes>
+  </test> <!-- PayPal(failed) -->
+  <test thread-count="5" parallel="tests" name="Delete a customer(failed)">
+    <classes>
+      <class name="testCases.DeleteCustomer">
+        <methods>
+          <include name="deleteCustomer" invocation-numbers="0"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.DeleteCustomer -->
+    </classes>
+  </test> <!-- Delete a customer(failed) -->
   <test thread-count="5" parallel="tests" name="Create a customer(failed)">
     <classes>
+      <class name="testCases.CreateCustomerStripeAPI2">
+        <methods>
+          <include name="cxCreationValidKey" invocation-numbers="2 1 0"/>
+          <include name="cxCreationInvalidKey" invocation-numbers="0 1 2"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.CreateCustomerStripeAPI2 -->
       <class name="testCases.CreateCustomerStripeAPIbasic">
         <methods>
-          <include name="cxCreationValidKey" invocation-numbers="0"/>
+          <include name="cxCreationValidKey" invocation-numbers="0 1"/>
+          <include name="cxCreationInvalidKey" invocation-numbers="0 1"/>
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.CreateCustomerStripeAPIbasic -->
+      <class name="testCases.CreateCustomerStripeAPI">
+        <methods>
+          <include name="cxCreationValidKey" invocation-numbers="0 1 2"/>
+          <include name="cxCreationInvalidKey" invocation-numbers="2 0 1"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.CreateCustomerStripeAPI -->
     </classes>
   </test> <!-- Create a customer(failed) -->
 </suite> <!-- Failed suite [Suite] -->

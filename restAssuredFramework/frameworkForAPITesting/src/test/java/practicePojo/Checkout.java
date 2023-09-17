@@ -1,0 +1,30 @@
+package practicePojo;
+
+import java.util.ArrayList;
+
+public class Checkout {
+
+	private String intent;
+	private ArrayList<Purchase_units1> purchase_units;
+
+	public Checkout(String intent, ArrayList<Purchase_units1> purchase_units) {
+		this.intent = intent;
+		this.purchase_units = purchase_units;
+	}
+
+	public String getIntent() {
+		return intent;
+	}
+
+	public void setIntent(String intent) {
+		this.intent = intent;
+	}
+
+	public ArrayList<Purchase_units1> getPurchase_units() {
+		return purchase_units;
+	}
+
+	public void setPurchase_units(ArrayList<Purchase_units1> purchase_units) {
+		this.purchase_units = purchase_units;
+	}
+}

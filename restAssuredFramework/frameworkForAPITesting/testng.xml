@@ -15,5 +15,12 @@
     <classes>
       <class name="testCases.DeleteCustomer"></class>
     </classes>
+    
+  </test>
+  <test name="PayPal">
+    <classes>
+      <class name="utilityPractice.PayPal"></class>
+    </classes>
+    
   </test> <!-- Test -->
 </suite> <!-- Suite -->

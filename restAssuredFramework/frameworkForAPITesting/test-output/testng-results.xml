@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-09-17T10:25:31Z" name="Default suite" finished-at="2023-09-17T10:25:37Z" duration-ms="6034">
+  <suite started-at="2023-09-17T15:29:27Z" name="Default suite" finished-at="2023-09-17T15:29:48Z" duration-ms="20862">
     <groups>
     </groups>
-    <test started-at="2023-09-17T10:25:31Z" name="Default test" finished-at="2023-09-17T10:25:37Z" duration-ms="6034">
-      <class name="utilityPractice.PayPal">
-        <test-method signature="getAccessToken()[pri:0, instance:utilityPractice.PayPal@291f18]" started-at="2023-09-17T10:25:31Z" name="getAccessToken" finished-at="2023-09-17T10:25:33Z" duration-ms="2679" status="PASS">
+    <test started-at="2023-09-17T15:29:27Z" name="Default test" finished-at="2023-09-17T15:29:48Z" duration-ms="20862">
+      <class name="utilityPractice.PayPal1">
+        <test-method signature="getAccessToken()[pri:1, instance:utilityPractice.PayPal1@6bc407fd]" started-at="2023-09-17T15:29:27Z" name="getAccessToken" finished-at="2023-09-17T15:29:46Z" duration-ms="19473" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getAccessToken -->
-        <test-method signature="createOrder()[pri:2, instance:utilityPractice.PayPal@291f18]" started-at="2023-09-17T10:25:33Z" name="createOrder" finished-at="2023-09-17T10:25:35Z" depends-on-methods="utilityPractice.PayPal.getAccessToken" duration-ms="1832" status="PASS">
+        <test-method signature="createOrder()[pri:2, instance:utilityPractice.PayPal1@6bc407fd]" started-at="2023-09-17T15:29:46Z" name="createOrder" finished-at="2023-09-17T15:29:48Z" depends-on-methods="utilityPractice.PayPal1.getAccessToken" duration-ms="1368" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createOrder -->
-        <test-method signature="getOrders()[pri:3, instance:utilityPractice.PayPal@291f18]" started-at="2023-09-17T10:25:35Z" name="getOrders" finished-at="2023-09-17T10:25:37Z" depends-on-methods="utilityPractice.PayPal.createOrder, utilityPractice.PayPal.getAccessToken" duration-ms="1500" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getOrders -->
-      </class> <!-- utilityPractice.PayPal -->
+      </class> <!-- utilityPractice.PayPal1 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
