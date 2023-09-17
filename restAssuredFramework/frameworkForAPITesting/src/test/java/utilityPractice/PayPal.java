@@ -17,6 +17,7 @@ public class PayPal {
 	public static String client_Id = "AcC6jQ1POX_mMAQQfmxwPG_rWnew3WDohOjBzqeXS8Su0k_hgDHbEBwZyRep-Mgc2ex3XMH9g-ISZ9tU";
 	public static String client_Secret = "EBBgyE7Y_21mL2Lf6CKmaMnAkLvfN5OQETE6m5SZAEElQ2tT6jMVb9Xb_mhjMzUJTxfFCxc_rX8w0xE0";
 	public static String accesstoken;
+	public static String id;
 
 	@Test
 	public static void getAccessToken() {
@@ -48,6 +49,15 @@ public class PayPal {
 				.post("/v2/checkout/orders");
 		res.prettyPrint();
 		Assert.assertEquals(res.jsonPath().getString("status"), "CREATED");
+		id = res.jsonPath().getString("id");
+	}
+
+	@Test(priority = 3, dependsOnMethods = { "getAccessToken", "createOrder" })
+	public static void getOrders() {
+		RestAssured.baseURI = "https://api.sandbox.paypal.com";
+		Response res = given().auth().oauth2(accesstoken).log().all().get("/v2/checkout/orders/" + id);
+		res.prettyPrint();
+		Assert.assertEquals(res.jsonPath().getString("id"), id);
 	}
 
 }

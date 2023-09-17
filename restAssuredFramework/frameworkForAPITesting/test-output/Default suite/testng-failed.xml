@@ -6,6 +6,7 @@
       <class name="utilityPractice.PayPal">
         <methods>
           <include name="createOrder"/>
+          <include name="getOrders"/>
           <include name="getAccessToken"/>
         </methods>
       </class> <!-- utilityPractice.PayPal -->
