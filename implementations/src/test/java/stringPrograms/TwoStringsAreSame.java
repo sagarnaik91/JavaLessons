@@ -7,7 +7,7 @@ public class TwoStringsAreSame {
 		String secondString = "my name is sagar";
 		System.out.println(firstString.equalsIgnoreCase(secondString));
 		System.out.println(firstString.compareToIgnoreCase(secondString));
-
+//	System.out.println(firstString.compareToIgnoreCase(secondString));
 	}
 
 }
