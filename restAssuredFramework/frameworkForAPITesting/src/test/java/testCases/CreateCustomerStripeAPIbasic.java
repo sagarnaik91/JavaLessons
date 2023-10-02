@@ -14,7 +14,7 @@ import utilities.DataUtil;
 public class CreateCustomerStripeAPIbasic extends baseClass.BaseTest {
 	@Test(dataProviderClass = DataUtil.class, priority = 1, dataProvider = "DataUtil")
 	public static void cxCreationValidKey(String name, String email, String description) {
-		ExtentListeners.testReport.get().info(email);
+		//ExtentListeners.testReport.get().info(email);
 		System.out.println("name is "+name);
 		System.out.println("email is "+email);
 		System.out.println("description is "+description);

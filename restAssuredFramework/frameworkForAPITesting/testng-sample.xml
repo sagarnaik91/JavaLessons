@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests">
+	<listeners>
+	<listener class-name="listener.ExtentListeners"></listener>
+</listeners>
+  <test name="Create a customer">
+    <classes>
+      <class name="testCases.CreateCustomerStripeAPIbasic"/>
+     <class name="testCases.CreateCustomerStripeAPI2"/>
+      <class name="testCases.CreateCustomerStripeAPI"/>
+    </classes>
+  </test>
+  <test name="Delete a customer">
+    <classes>
+      <class name="testCases.DeleteCustomer"></class>
+    </classes>
+    
+  </test>
+  <test name="PayPal">
+    <classes>
+      <class name="utilityPractice.PayPal"></class>
+    </classes>
+    
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

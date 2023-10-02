@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="utilityPractice.PayPal1">
+      <class name="utilityPractice.PayPal2">
         <methods>
-          <include name="getAccessToken"/>
           <include name="createOrder"/>
         </methods>
-      </class> <!-- utilityPractice.PayPal1 -->
+      </class> <!-- utilityPractice.PayPal2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
