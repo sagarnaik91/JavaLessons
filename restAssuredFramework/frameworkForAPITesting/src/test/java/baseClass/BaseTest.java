@@ -20,7 +20,7 @@ public class BaseTest {
 				"C:\\Users\\003BF8744\\testDevelopement\\java\\restAssuredFramework\\frameworkForAPITesting\\config.properties");
 		config.load(fis);
 		RestAssured.baseURI = config.getProperty("baseUri");
-		RestAssured.basePath = config.getProperty("basePath");
+		//RestAssured.basePath = config.getProperty("basePath");
 
 	}
 

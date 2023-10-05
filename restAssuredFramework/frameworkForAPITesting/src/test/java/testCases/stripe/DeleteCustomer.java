@@ -1,4 +1,4 @@
-package testCases;
+package testCases.stripe;
 
 import java.util.Hashtable;
 
@@ -6,7 +6,7 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import api.DeleteCustomerAPI;
+import api.stripe.DeleteCustomerAPI;
 import baseClass.BaseTest;
 import io.restassured.response.Response;
 import listener.ExtentListeners;

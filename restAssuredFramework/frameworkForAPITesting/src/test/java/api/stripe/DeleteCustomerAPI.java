@@ -1,4 +1,4 @@
-package api;
+package api.stripe;
 
 import static io.restassured.RestAssured.DEFAULT_BODY_ROOT_PATH;
 import static io.restassured.RestAssured.given;

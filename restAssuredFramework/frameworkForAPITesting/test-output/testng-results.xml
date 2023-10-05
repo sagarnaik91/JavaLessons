@@ -1,25 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+<testng-results ignored="1" total="3" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-02T14:25:17Z" name="Default suite" finished-at="2023-10-02T14:25:24Z" duration-ms="7206">
+  <suite started-at="2023-10-05T17:51:38Z" name="Suite" finished-at="2023-10-05T17:51:47Z" duration-ms="8639">
     <groups>
     </groups>
-    <test started-at="2023-10-02T14:25:17Z" name="Default test" finished-at="2023-10-02T14:25:24Z" duration-ms="7206">
-      <class name="utilityPractice.PayPal2">
-        <test-method signature="getAccessToken()[pri:1, instance:utilityPractice.PayPal2@291f18]" started-at="2023-10-02T14:25:17Z" name="getAccessToken" finished-at="2023-10-02T14:25:20Z" duration-ms="3681" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- getAccessToken -->
-        <test-method signature="createOrder()[pri:2, instance:utilityPractice.PayPal2@291f18]" started-at="2023-10-02T14:25:20Z" name="createOrder" finished-at="2023-10-02T14:25:22Z" duration-ms="1982" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- createOrder -->
-        <test-method signature="getOrder()[pri:3, instance:utilityPractice.PayPal2@291f18]" started-at="2023-10-02T14:25:22Z" name="getOrder" finished-at="2023-10-02T14:25:24Z" duration-ms="1519" status="PASS">
+    <test started-at="2023-10-05T17:51:38Z" name="Test" finished-at="2023-10-05T17:51:47Z" duration-ms="8639">
+      <class name="testCases.paypal.GetOrderTest">
+        <test-method signature="getOrder()[pri:0, instance:testCases.paypal.GetOrderTest@1a2e2935]" started-at="2023-10-05T17:51:44Z" name="getOrder" finished-at="2023-10-05T17:51:47Z" duration-ms="2692" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getOrder -->
-      </class> <!-- utilityPractice.PayPal2 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- testCases.paypal.GetOrderTest -->
+      <class name="testCases.paypal.CreateOrderTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.paypal.CreateOrderTest@687a762c]" started-at="2023-10-05T17:51:38Z" name="setup" finished-at="2023-10-05T17:51:38Z" duration-ms="457" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="createOrder()[pri:0, instance:testCases.paypal.CreateOrderTest@687a762c]" started-at="2023-10-05T17:51:38Z" name="createOrder" finished-at="2023-10-05T17:51:44Z" duration-ms="5933" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- createOrder -->
+      </class> <!-- testCases.paypal.CreateOrderTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

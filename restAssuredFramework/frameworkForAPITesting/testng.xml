@@ -1,19 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-	<listeners>
-	<listener class-name="listener.ExtentListeners"></listener>
-</listeners>
-  <test thread-count="5" name="Test">
-    <classes>
-      <class name="utilityPractice.PayPal1"/>
-      <class name="testCases.CreateCustomerStripeAPIbasic"/>
-      <class name="testCases.DeleteCustomer"/>
-      <class name="testCases.CreateCustomerStripeAPI2"/>
-      <class name="utilityPractice.PayPal"/>
-      <class name="utilityPractice.DatUtilPracticeDraft1"/>
-      <class name="testCases.CreateCustomerStripeAPI"/>
-      <class name="utilityPractice.TestCase"/>
-    </classes>
-  </test> <!-- Test -->
-</suite> <!-- Suite -->
+	<test thread-count="5" name="Test">
+		<classes>
+			<class name="testCases.paypal.CreateOrderTest" />
+			<class name="testCases.paypal.GetOrderTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

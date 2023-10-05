@@ -1,4 +1,4 @@
-package api;
+package api.stripe;
 
 import static io.restassured.RestAssured.given;
 
