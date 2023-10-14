@@ -3,9 +3,9 @@ package api.paypal;
 import static io.restassured.RestAssured.given;
 
 import java.util.ArrayList;
+import java.util.Hashtable;
 
 import baseClass.BaseTest;
-import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import pojo.Orders;
@@ -22,9 +22,9 @@ public class OrderAPI extends BaseTest {
 		return access_token;
 	}
 
-	public static Response createOrder(String accessToken) {
+	public static Response createOrder(String accessToken, Hashtable<String, String> table) {
 		ArrayList<Purchase_units> list = new ArrayList<>();
-		list.add(new Purchase_units("USD", "101", "d9f80740-38f0-11e8-b467-0ed5f89f718b"));
+		list.add(new Purchase_units(table.get("currency_code"), table.get("value"), table.get("reference_id")));
 		Orders body = new Orders("CAPTURE", list);
 		Response response = given().contentType(ContentType.JSON).auth().oauth2(accessToken).body(body).log().all()
 				.post("/v2/checkout/orders");

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="testCases.paypal.GetOrderTest">
+      <class name="testCases.paypal.CreateOrderTest">
         <methods>
-          <include name="getOrder"/>
+          <include name="createOrder" invocation-numbers="1"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- testCases.paypal.GetOrderTest -->
+      </class> <!-- testCases.paypal.CreateOrderTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,16 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <listeners>
-    <listener class-name="listener.ExtentListeners"/>
-  </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="utilityPractice.PayPal">
+      <class name="testCases.paypal.GetOrderTest">
         <methods>
-          <include name="getAccessToken"/>
+          <include name="getOrder"/>
+          <include name="setup"/>
         </methods>
-      </class> <!-- utilityPractice.PayPal -->
+      </class> <!-- testCases.paypal.GetOrderTest -->
+      <class name="testCases.paypal.CreateOrderTest">
+        <methods>
+          <include name="createOrder" invocation-numbers="1 2 4 0 3"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testCases.paypal.CreateOrderTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

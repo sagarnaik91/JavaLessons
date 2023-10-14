@@ -13,6 +13,7 @@ public class BaseTest {
 	public static Properties config = new Properties();
 	public static FileInputStream fis;
 	public static ExcelReader excelReader = new ExcelReader(".\\src\\test\\java\\excel\\testdata.xlsx");
+	public static ExcelReader paypalexcelReader = new ExcelReader(".\\src\\test\\java\\excel\\paypaltestdata.xlsx");
 
 	@BeforeSuite
 	public static void setup() throws IOException {
