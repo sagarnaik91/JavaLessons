@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Test(failed)">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="Get(failed)">
     <classes>
       <class name="testCases.paypal.GetOrderTest">
         <methods>
@@ -9,12 +9,6 @@
           <include name="setup"/>
         </methods>
       </class> <!-- testCases.paypal.GetOrderTest -->
-      <class name="testCases.paypal.CreateOrderTest">
-        <methods>
-          <include name="createOrder" invocation-numbers="1 2 4 0 3"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- testCases.paypal.CreateOrderTest -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Get(failed) -->
 </suite> <!-- Failed suite [Suite] -->

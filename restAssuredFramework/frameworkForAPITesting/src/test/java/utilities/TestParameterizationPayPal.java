@@ -11,7 +11,7 @@ import baseClass.BaseTest;
 public class TestParameterizationPayPal extends BaseTest {
 	
 
-	@DataProvider
+	@DataProvider(parallel=true)
 	public Object[][] getData(Method m) {
 		int rows = paypalexcelReader.getRowCount(Constants.DATA_SHEET);
 		System.out.println("Total rows are " + rows);
