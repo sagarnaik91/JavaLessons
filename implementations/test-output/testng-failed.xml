@@ -3,11 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="selenium.Google1">
+      <class name="restAssured.RestCountriesGETApi">
         <methods>
-          <include name="launch"/>
+          <include name="getRequest2"/>
+          <include name="getRequest"/>
         </methods>
-      </class> <!-- selenium.Google1 -->
+      </class> <!-- restAssured.RestCountriesGETApi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
