@@ -31,6 +31,24 @@
       <version>5.7.1</version>
       <scope>test</scope>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/org.json/json -->
+<dependency>
+    <groupId>org.json</groupId>
+    <artifactId>json</artifactId>
+    <version>20240303</version>
+</dependency>
+<dependency>
+  <groupId>org.apache.avro</groupId>
+  <artifactId>avro</artifactId>
+  <version>1.11.1</version>
+</dependency>
+<dependency>
+  <groupId>org.apache.avro</groupId>
+  <artifactId>avro-tools</artifactId>
+  <version>1.11.1</version>
+</dependency>
+
+
   </dependencies>
 
   <build>
@@ -40,6 +58,24 @@
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.0.0-M5</version>
       </plugin>
+      <plugin>
+  <groupId>org.apache.avro</groupId>
+  <artifactId>avro-maven-plugin</artifactId>
+  <version>1.11.1</version>
+  <executions>
+    <execution>
+      <phase>generate-sources</phase>
+      <goals>
+        <goal>schema</goal>
+      </goals>
+      <configuration>
+        <sourceDirectory>${project.basedir}/src/main/avro/</sourceDirectory>
+        <outputDirectory>${project.basedir}/src/main/java/</outputDirectory>
+      </configuration>
+    </execution>
+  </executions>
+</plugin>
+
     </plugins>
   </build>
 </project>
